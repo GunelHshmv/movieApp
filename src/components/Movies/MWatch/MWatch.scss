@@ -1,0 +1,113 @@
+@import '../../../styles/variable.scss';
+@import '../../../styles/mixins.scss';
+h1{
+    color: white;
+    font-size: 38px;
+    font-weight: 700;
+}
+.header-MWatch{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.MWatch-button{
+    background-color: $secondary-dark;
+    width: 240px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid $primary-border;
+}
+.swiper-button-prev-MWatch,
+.swiper-button-next-MWatch{
+background-color: $primary-border;
+    border-radius: 8px;
+    padding: 13px 14px 10px 14px ;
+    text-align: center!important;
+}
+.swiper-pagination-MWatch{
+    width: 100px;
+text-align: center;
+}
+.swiper-pagination-MWatch .swiper-pagination-bullet{
+    border-radius: 0!important;
+    width: 32px!important;
+    height: 4px;
+    background-color: $primary-border;
+    
+}
+.swiper-pagination-MWatch .swiper-pagination-bullet-active{
+   background-color: $error-bg!important;
+   width: 32px!important;
+}
+.MWatch-swiper{
+    padding: 30px 30px 58px 30px;
+}
+.MWatch-slides{
+    padding: 20px;
+    background-color: $secondary-bg;
+    border-radius: 12px;
+    border: 1px solid $secindary-border;
+}
+.movie-poster-MWatch {
+    border-radius: 12px;
+    
+  }
+.movie-posters-MWatch {
+    border-radius: 12px;
+    width: 100%;
+
+  }
+  .movie-MWatch-img{
+    width: 100%;
+  }
+  .movie-MWatch-img img{
+    width: 100%;
+    border-radius: 12px;
+  }
+  .MWatch-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // padding: 10px;
+  }
+.MWatch-post{
+    display: flex;
+    justify-content: space-between;
+}  
+.MWatch-post-inner{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: $post-icon-bg;
+    color: $post-text-color;
+    padding: 0px 10px;
+    font-size: 12px;
+    border-radius: 50px;
+    // background-color: black;
+}
+@include respond(phone){
+  .swiper-button-prev-MWatch,
+  .swiper-button-next-MWatch{
+    display:none
+  }
+  .header-MWatch{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+  }
+  .MWatch-button{
+   top: 420px;
+   position: absolute;
+     left: 80px;
+     z-index: 33;
+     border-radius: 0;
+     height: 10px;
+     background: none;
+     width: 160px;
+  }
+}

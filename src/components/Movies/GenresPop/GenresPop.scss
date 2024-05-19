@@ -1,0 +1,134 @@
+@import '../../../styles/variable.scss';
+@import '../../../styles/mixins.scss';
+h1{
+    color: white;
+    font-size: 38px;
+    font-weight: 700;
+}
+.header-popGenre{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popGenre-button{
+    background-color: $secondary-dark;
+    width: 240px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid $primary-border;
+}
+.swiper-button-prev-popGenre,
+.swiper-button-next-popGenre{
+background-color: $primary-border;
+    border-radius: 8px;
+    padding: 13px 14px 10px 14px ;
+    text-align: center!important;
+}
+.swiper-pagination-popGenre{
+    width: 100px;
+text-align: center;
+}
+.swiper-pagination-popGenre .swiper-pagination-bullet{
+    border-radius: 0!important;
+    width: 32px!important;
+    height: 4px;
+    background-color: $primary-border;
+    
+}
+.swiper-pagination-popGenre .swiper-pagination-bullet-active{
+   background-color: red!important;
+
+}
+.popGenre-swiper{
+    padding: 30px;
+}
+.popGenre-slides{
+    padding: 24px;
+    background-color: $secondary-bg;
+    border-radius: 12px;
+    border: 1px solid $secindary-border;
+}
+.movie-poster-popGenre {
+    border-radius: 12px;
+  }
+.movie-posters-popGenre {
+    border-radius: 12px;
+    width: 100%;
+  }
+  
+  .popGenre-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  margin-top: 6px;
+
+  }
+  
+  .movie-grid-popGenre {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  gap: 4px;
+  position: relative;
+  }
+  .gradinet-popGenre{
+    position: absolute;
+    top:0%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 16%, rgba(0,0,0,0.5258158263305322) 40%, rgba(18,18,18,0.30015756302521013) 64%, rgba(43,43,43,0) 89%);
+    opacity: 0.9;
+    }
+  .movie-poster-popGenre img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+  .left_top p{
+    color: white;
+    line-height: 0!important;
+    padding: 10px;
+    border-radius: 6px;
+  }
+.left_top{
+  display: flex;
+  // height: 80px;
+  height: 100%;
+  flex-direction: column;
+}
+  .top_pop{
+    border-radius: 6px;
+    background-color: red;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+  }
+  @include respond(phone){
+    .swiper-button-prev-popGenre,
+    .swiper-button-next-popGenre{
+      display:none
+    }
+    .header-popGenre{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      position: relative;
+    }
+    .popGenre-button{
+     position: absolute;
+     top: 460px;
+     left: 80px;
+     z-index: 33;
+     border-radius: 0;
+     height: 10px;
+     background: none;
+     width: 160px;
+    }
+
+  }

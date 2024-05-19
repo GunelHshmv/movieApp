@@ -1,0 +1,88 @@
+@import '../../styles/variable.scss';
+@import '../../styles/mixins.scss';
+
+.trial-component{
+    margin: 100px 0;
+    position: relative;
+    
+}
+.grid-Trial img{
+    width: 100%;
+    height: 100%;
+}
+.gradinet-Trial{
+    background: linear-gradient(90deg, rgba(4,4,4,1) 0%, rgba(28,6,6,1) 32%, rgba(130,12,12,1) 86%, rgba(221,18,18,1) 100%);
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.gradinet-Trial .title{
+    font-size: 48px;
+    font-weight: 700;
+}
+.gradinet-Trial .description{
+    font-size: 18px;
+    font-weight: 400;
+}
+.gradinet-Trial button{
+    background-color: $error-bg;
+    height: 64px;
+    width: 180px;
+    opacity: 1!important;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    border: 1px solid $error-bg;
+    border-radius: 8px;
+}
+
+@include respond(phone){
+    .trial-component{
+        height: 300px;
+    }
+    .gradinet-Trial{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .gradinet-Trial .title{
+        font-size: 24px;
+    }
+    .gradinet-Trial .description{
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+@include respond(tab-port){
+    .trial-component{
+        height: 300px;
+    }
+    .gradinet-Trial{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .gradinet-Trial .title{
+        font-size: 24px;
+    }
+    .gradinet-Trial .description{
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
